@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+h1 {color:blue;}
+h2 {color:red;}
+h3 {color:yellow;}
+li {background-color:darksalmon;}
+title {color:blue;
+	   font-family:verdana;
+	   width:12px;}
+img {border: 3px solid purple;
+		border-radius: 12px;
+		display: block;
+		width: 250px;
+		height:260px;
+		margin-left:auto;
+		margin-right:auto;
+		opacity: 0.8;}
+body {background-color:cyan;}
+table, th, td, li{
+  border: 1px solid black;
+}
+<title>Descriere a propriei persoane</title>
+</style>
+<script>
+function myFunction(){
+document.getElementById("demo").innerHTML = "Angajat la Orange";
+document.getElementById('demo1').src="images.jfif";
+document.getElementById('demo1').style.opacity='0.5';
+document.getElementById('demo1').style.border="thick solid orange";
+document.body.style.backgroundColor="green";
+document.getElementById('demo3').style.color="pink";
+document.getElementById('demo4').innerHTML = "Sa stiu programa in C/C++.";
+document.getElementById('demo5').innerHTML = "Sa dobandesc cunostiinte in fizica.";
+}
+function afisareVarsta(){
+var astazi = new Date;
+var varstaMea;
+var anulNasterii = document.getElementById("varsta").innerHTML;
+var anulCurent = astazi.getFullYear();
+varstaMea = anulCurent - parseInt(anulNasterii);
+document.getElementById("varsta").innerHTML = varstaMea;
+}
+</script>
+</head>
+
+
+<body id="demo2">
+<img id="demo1" src="r.jpg">
+<h1>Nume si prenume</h1>
+<h2 id="demo">Moldovan Radu</h2>
+<p onmouseover = "afisareVarsta()" id="varsta">2001</p>
+
+<h2 id="demo3">E-mail</h2>
+<h3 id="demo3">Moldovan.RD.Radu@utcluj.didatec.ro</h3>
+
+<h2>Asteptarile legate de educatie(citat)</h2>
+<h3 id="demo3">“Scopul educatiei este inaintarea in cunoastere si distingerea adevarului.” (John F. Kennedy)</h3> 
+
+<button type="button" onclick="myFunction()">Alta viata</button>
+
+<table style="background-color:orange;">
+ <tr>
+    <th>Denumirea disciplinei</th>
+    <th>Perioada de studiu</th> 
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>Elementa de fizica</td>
+    <td>Anul I, semestrul I</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/03.pdf">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/03.pdf</a></td>
+  </tr>
+  <tr>
+    <td>Fizica superioara</td>
+    <td>Anul I, semestrul II</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/10.pdf">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/10.pdf</a></td>
+  </tr>
+  <tr>
+    <td>Algebra liniara</td>
+    <td>Anul I, semestrul I</td>
+    <td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/02.pdf">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/02.pdf</a></td>
+  </tr>
+</table>
+
+<h3 id="demo3">Lista hobby-uri</h3>
+<ul>
+<li id="demo4">Cititul</li>
+<li id="demo5">Jocuri de strategie</li>
+</ul>
+
+</body>
+
+</html>
